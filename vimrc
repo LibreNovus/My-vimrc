@@ -38,7 +38,19 @@ set autoread
 set title
 set linebreak
 set foldmethod=marker
+set noswapfile
+" Search {{{
+set ignorecase
+set smartcase
+set incsearch
+set showmatch
+set hlsearch
+set gdefault
 
+set scrolloff=3
+set sidescroll=1
+set sidescrolloff=10
+" }}}
 set nu
 syntax on
 :set mouse=v
@@ -49,6 +61,15 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 nnoremap <space> za
+nnoremap D d%
+nnoremap n nzzzv
+nnoremap N Nzzzv
+noremap H ^
+noremap L g_
+
+map <tab> %
+
+
 " }}}
 " Remember line from closed file{{{
 if has("autocmd")
