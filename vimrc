@@ -56,10 +56,6 @@ syntax on
 :set mouse=v
 " }}}
 " Remap{{{
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
 nnoremap <space> za
 nnoremap D d%
 nnoremap n nzzzv
@@ -68,8 +64,25 @@ noremap H ^
 noremap L g_
 
 map <tab> %
+" Disable arrow keys{{{
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
-
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+"}}}
+" Auto close brackets{{{
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O"}}}
 " }}}
 " Remember line from closed file{{{
 if has("autocmd")
